@@ -1,12 +1,19 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import LogIn from './components/Login/LogIn';
 import Navbar from './components/Navbar/Navbar';
-import SlideImg from './components/SlideImg/SlideImg';
+
+
 
 function App() {
   return (
     <div className="App">  
     <Navbar/>
-    <SlideImg/>
+    <Routes>
+      <Route path='/' element={<LogIn/>}>
+       
+      </Route>
+    </Routes>
     </div>
   );
 }
