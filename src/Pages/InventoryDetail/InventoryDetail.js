@@ -43,7 +43,8 @@ const InventoryDetail = () => {
     const handleUpdate = (e) => {
         e.preventDefault();
         const updateInput = parseInt(e.target.update.value);
-        fetch(`https://smarthphone-warehouse-37.herokuapp.com/inventory/${id}`, {
+        console.log(updateInput);
+        fetch(`http://localhost:5000/inventory/${id}`, {
             method: 'PUT',
             body: JSON.stringify({ quantity, updateInput }),
             headers: {
@@ -54,6 +55,7 @@ const InventoryDetail = () => {
             .then((data) => {
 
                 if (data) {
+                    console.log(data);
                     setProduct(product.quantity = product.quantity + 1);
                     toast.success('Updated Successful')
                 }
