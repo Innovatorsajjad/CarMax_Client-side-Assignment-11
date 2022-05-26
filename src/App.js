@@ -8,6 +8,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home';
 import ManageItem from './Pages/ManageItem/ManageItem';
 import 'react-toastify/dist/ReactToastify.css';
+import AddItem from './Pages/AddItem/AddItem';
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/manage' element={<ManageItem/>}></Route>
+      <Route path='/additems' element={<AddItem></AddItem>}></Route>
       <Route path='/blogs' element={<Blogs/>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
       <Route path='/register' element={<Register></Register>}></Route>
