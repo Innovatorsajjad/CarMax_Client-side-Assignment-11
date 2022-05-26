@@ -1,27 +1,60 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 const Navbar = () => {
+    const [user] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+    };
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container">
-                    <Link className="navbar-brand" to="#">CarMax</Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <nav className="navbar navbar-expand-lg">
+                <div className="container-fluid">
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav mx-auto ">
-                            <li className="nav-item ">
-                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                            </li>
+                    <h1 className='fw-bold'><Link className='text-decoration-none' to="/"><span className='text-dark'>Car</span><span className='navbar-brand-phone'>Max</span></Link></h1>
+
+                    <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-link">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/manage">Manage Inventory</Link>
+                                <Link className="nav-link" to="/">Home</Link>
                             </li>
+
+                            {user && <> <li className="nav-item">
+                                <Link className="nav-link" to="/manage">Manage Items</Link>
+                            </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/myitems">My Items</Link>
+                                </li>
+
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/additems">Add Item</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/help">Help</Link>
+                                </li>
+                            </>
+                            }
                             <li className="nav-item">
                                 <Link className="nav-link" to="/blogs">Blogs</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contact">Contact Us</Link>
+                            </li>
+
+                            {!user ? <li className="nav-item">
+                                <Link className="nav-link" to="/login">Login</Link>
+                            </li> :
+                                <li className="nav-item">
+                                    <Link onClick={logout} className="nav-link text-danger" to="">Logout</Link>
+                                </li>}
                         </ul>
-                        <button type="button" className="btn btn-primary">Log in</button>
+
                     </div>
                 </div>
             </nav>
