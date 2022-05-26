@@ -18,21 +18,21 @@ const AddItem = () => {
 
         }
 
-        // fetch('https://smarthphone-warehouse-37.herokuapp.com/allproducts', {
-        //     method: 'POST',
-        //     body: JSON.stringify(newProduct),
-        //     headers: {
-        //         'Content-type': 'application/json'
-        //     }
-        // })
-        //     .then((res) => res.json())
-        //     .then((data) => {
-        //         if (data) {
-        //             toast.success('Added Successful');
-        //         }
+        fetch('http://localhost:5000/allproducts', {
+            method: 'POST',
+            body: JSON.stringify(newProduct),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data) {
+                    toast.success('Added Successful');
+                }
 
-        //     })
-        // e.target.reset();
+            })
+        e.target.reset();
     }
     return (
         <div>
