@@ -16,7 +16,7 @@ const ManageItems = () => {
     }
 
     const handleDelete = (id) => {
-        fetch(`https://smarthphone-warehouse-37.herokuapp.com/manage?id=${id}`, {
+        fetch(`http://localhost:5000/manage?id=${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
