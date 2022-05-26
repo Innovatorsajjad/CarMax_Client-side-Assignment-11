@@ -1,0 +1,64 @@
+[
+    {
+      "_id": "1",
+      "category": "Data",
+      "name": "Climbing up of a tree",
+      "price": 700,
+      "ratings": 4,
+      "ratingsCount": 3725,
+      "img": "https://i.ibb.co/pW1yrHr/Wild-life-photography2.webp",
+      "description":"This Photography was needed form tree ..."
+    },
+    
+    {
+        "_id": "2",
+        "category": "Data",
+        "name": "Zebra on Africa",
+        "price": 250,
+        "ratings": 4,
+        "ratingsCount": 3725,
+        "img": "https://i.ibb.co/0jJmrdK/Wild-life-photography6.webp",
+        "description":"This Photography was needed from Africa ..."
+      },
+      {
+        "_id": "3",
+        "category": "Data",
+        "name": "Wild Life Photographer",
+        "price": 650,
+        "ratings": 4,
+        "ratingsCount": 3725,
+        "img": "https://i.ibb.co/7CcN4HY/Wild-life-photography1.jpg",
+        "description":"This Photography is for a photographer ..."
+      },
+      {
+        "_id": "4",
+        "category": "Data",
+        "name": "Beautiful Bird",
+        "price": 400,
+        "ratings": 4,
+        "ratingsCount": 3725,
+        "img": "https://i.ibb.co/nbW2YS2/Wild-life-photography5-1.jpg",
+        "description":"This Photography was need of a Bird"
+      },
+      {
+        "_id": "5",
+        "category": "Data",
+        "name": "Sleeping pet",
+        "price": 630,
+        "ratings": 4,
+        "ratingsCount": 3725,
+        "img": "https://i.ibb.co/q1CQDj9/Wild-life-photography3-1.jpg",
+        "description":"This Photography was needed form tree ..."
+      },
+      {
+        "_id": "6",
+        "category": "Data",
+        "name": "Cartoon Pic",
+        "price": 300,
+        "ratings": 4,
+        "ratingsCount": 3725,
+        "img": "https://i.ibb.co/VpXBwPd/Wild-life-photography4-1.jpg",
+        "description":"This Photography was Design of a cartoon..."
+      }
+
+]

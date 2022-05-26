@@ -1,10 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home';
-import ManageInventory from "./Pages/ManageInventory/ManageInventory"
+import ManageItem from './Pages/ManageItem/ManageItem';
 
 
 
@@ -14,10 +13,10 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
-      <Route path='/manageinventory' element={<ManageInventory/>}></Route>
+      <Route path='/manage' element={<ManageItem/>}></Route>
       <Route path='/blogs' element={<Blogs/>}></Route>
     </Routes>
-    <Footer/>
+    
     </div>
   );
 }
