@@ -12,6 +12,7 @@ import AddItem from './Pages/AddItem/AddItem';
 import MyItems from './Pages/MyItems/MyItems';
 import RequireAuth from './components/Auth/RequireAuth/RequireAuth';
 import InventoryDetail from './Pages/InventoryDetail/InventoryDetail';
+import Help from './Pages/Help/Help';
 
 
 
@@ -30,6 +31,7 @@ function App() {
           </RequireAuth>
         }></Route>
       <Route path='/blogs' element={<Blogs/>}></Route>
+      <Route path='/help' element={<Help></Help>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
       <Route path='/register' element={<Register></Register>}></Route>
     </Routes>

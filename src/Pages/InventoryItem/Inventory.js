@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Inventory.css'
 
 const Inventory = ({product}) => {
     const { name, price, img, description, _id, supplier,quantity } = product;
