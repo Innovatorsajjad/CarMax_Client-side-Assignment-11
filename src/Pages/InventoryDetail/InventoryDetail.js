@@ -10,7 +10,7 @@ const InventoryDetail = () => {
     useEffect(() => {
 
 
-        fetch(`http://localhost:5000/inventory/${id}`)
+        fetch(`https://fierce-springs-58637.herokuapp.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [product])
@@ -22,7 +22,7 @@ const InventoryDetail = () => {
     const handleDelivery = (delivery) => {
 
 
-        fetch(`http://localhost:5000/inventory/${id}`, {
+        fetch(`https://fierce-springs-58637.herokuapp.com/inventory/${id}`, {
             method: 'PUT',
             body: JSON.stringify({ quantity, delivery }),
             headers: {
@@ -44,7 +44,7 @@ const InventoryDetail = () => {
         e.preventDefault();
         const updateInput = parseInt(e.target.update.value);
         console.log(updateInput);
-        fetch(`http://localhost:5000/inventory/${id}`, {
+        fetch(`https://fierce-springs-58637.herokuapp.com/inventory/${id}`, {
             method: 'PUT',
             body: JSON.stringify({ quantity, updateInput }),
             headers: {
