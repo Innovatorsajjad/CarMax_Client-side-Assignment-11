@@ -2,11 +2,11 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='d-flex container mt-5 raw'>
-            <div className="banner w-50 col-md-6">
-                <img className='rounded' src="https://st.depositphotos.com/1610517/4023/i/450/depositphotos_40236645-stock-photo-did-you-know-education-concept.jpg" alt="" />
+        <div className='d-lg-flex container mt-5  mx-auto'>
+            <div className="banner">
+                <img className='rounded img-fluid' src="https://st.depositphotos.com/1610517/4023/i/450/depositphotos_40236645-stock-photo-did-you-know-education-concept.jpg" alt="" />
             </div>
-            <div className="accordian w-50 my-auto border rounded col-md-6">
+            <div className="accordian  my-auto border rounded">
                 <div className="accordion accordion-flush" id="accordionFlushExample">
                     <div className="accordion-item">
                         <h2 className="accordion-header" id="flush-headingOne">

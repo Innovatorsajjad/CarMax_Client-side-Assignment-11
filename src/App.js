@@ -13,6 +13,7 @@ import MyItems from './Pages/MyItems/MyItems';
 import RequireAuth from './components/Auth/RequireAuth/RequireAuth';
 import InventoryDetail from './Pages/InventoryDetail/InventoryDetail';
 import Help from './Pages/Help/Help';
+import ContactUs from './Pages/ContactUs/ContactUs';
 
 
 
@@ -34,6 +35,7 @@ function App() {
       <Route path='/help' element={<Help></Help>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
       <Route path='/register' element={<Register></Register>}></Route>
+      <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
     </Routes>
     <ToastContainer></ToastContainer>
     
